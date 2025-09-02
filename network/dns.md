@@ -63,9 +63,9 @@ Root는 TLD NS를, TLD는 Authoritative NS를 알려주고, 진짜 IP는 Authori
 ### 5.1 기본 조회
 ```bash
 dig www.google.com A +noall +answer
+```
+
 ---
-
-
 
 ## 6. DNS에서 자주 발생하는 장애 유형
 
