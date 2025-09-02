@@ -37,10 +37,13 @@ Root는 TLD NS를, TLD는 Authoritative NS를 알려주고, 진짜 IP는 Authori
 
 - **A / AAAA**: IPv4 / IPv6 주소  
 - **CNAME**: 별칭. apex 도메인에는 둘 수 없음 → 클라우드 사업자들은 ALIAS/ANAME 같은 기능 제공
-    > Note: 서버 IP 바뀌면 TTL 때문에 전파 지연이 생김 (비번한 이슈)
-- **MX**: 메일 서버 지정. priority 값 잘못 잡으면 메일 라우팅 꼬임  
-- **TXT**: SPF, DKIM, DMARC 같은 메일 인증에 필수. 예전에 고객사에서 DKIM 누락돼서 메일 스팸 처리된 적 있었음  
-- **PTR**: 역방향(IP → 도메인). 메일 서버 신뢰도랑 직결  
+    > Note: 서버 IP 바뀌면 TTL 때문에 전파 지연이 생김 (빈번한 이슈)
+- **MX**: 메일 서버 지정. priority 값 잘못 잡으면 메일 라우팅 꼬임
+    > Note: 클라우드 로드밸런서 붙일 때 실수로 apex에 CNAME 걸면 안 됨. (ALIAS/ANAME 필요)  
+- **TXT**: SPF, DKIM, DMARC 같은 메일 인증에 필수
+    > Note: DKIM 누락되면 메일 스팸 처리됨
+- **PTR**: 역방향(IP → 도메인). 메일 서버 신뢰도와 직결
+    > Note: 메일 서버 PTR 누락되면 외부 서버가 신뢰 안 해서 메일 튕김
 
 → 실제로 어디서 문제 생기는지 같이 알아둘 것
 
