@@ -29,8 +29,6 @@ Root는 TLD NS를, TLD는 Authoritative NS를 알려주고, 진짜 IP는 Authori
 | 예시 | Google DNS(8.8.8.8), Cloudflare(1.1.1.1) | AWS Route53, Azure DNS, Cloudflare Authoritative |
 | 핵심 | **중개자 (캐시)** | **정답 보관자 (원천 데이터)** |
 
-→ AWS 문서에서는 Authoritative를 "신뢰할 수 있는 DNS"라고 번역해놨지만, 의미는 권한 있는 DNS가 맞음.  
-
 ---
 
 ## 3. 주요 레코드 타입 
