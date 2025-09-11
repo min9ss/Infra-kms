@@ -10,6 +10,4 @@
 3. [스토리지](./storage/)
 4. [데이터베이스](./database/)
 5. [클라우드](./cloud/)
-6. [DevOps](./devops/)
-
 ---
